@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       flash[:success] = 'ログインに成功しました。'
       redirect_to controller: :tasks, action: :index
     else
-      flash.now[:danger] = 'メールアドレスかパスワードに入力の誤りがあります。'
+     flash.now[:danger] = 'メールアドレスかパスワードに入力の誤りがあります。'
       render :new
     end
   end
