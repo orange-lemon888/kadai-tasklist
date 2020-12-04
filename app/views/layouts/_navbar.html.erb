@@ -1,6 +1,5 @@
-<%# flash[:success] = nil %>
-
 <% if logged_in? %>
+  <span>Login User:<%= current_user.name %></span>
   <%= link_to 'Logout', logout_path, method: :delete %>
 <% else %>
   <%= link_to 'Signup', signup_path %></li>

@@ -11,6 +11,10 @@ class UsersController < ApplicationController
       redirect_to '/login'
     else
       flash.now[:danger] = 'ユーザの登録に失敗しました。'
+      @name = params[:user][:name]
+      @email = params[:user][:email]
+      @password = params[:user][:password]
+      @password_confirmation = params[:user][:password_confirmation]
       render :new
     end
   end

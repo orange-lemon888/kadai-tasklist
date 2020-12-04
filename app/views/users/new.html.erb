@@ -3,19 +3,19 @@
   <%= render 'layouts/error_messages', model: f.object %>
   <div>
     <%= f.label :name, 'Name' %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, value: @name %> 
   </div>
   <div>
     <%= f.label :email, 'Email' %>
-    <%= f.email_field :email %>
+    <%= f.email_field :email, value: @email %>
   </div>
   <div>
     <%= f.label :password, 'Password' %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, value: @password %>
   </div>
   <div>
     <%= f.label :password_confirmation, 'Confirmation' %>
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation, value: @password_confirmation %>
   </div>
   
   <%= f.submit 'Sign up' %>
