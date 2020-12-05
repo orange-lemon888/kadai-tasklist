@@ -47,7 +47,7 @@ class TasksController < ApplicationController
     end
     
     private
-    #1203===========54行目エラーになる（一覧から新規投稿クリック時）
+    
     def correct_user
       @task = current_user.tasks.find_by(id: params[:id])
       unless @task
